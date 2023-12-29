@@ -7,20 +7,33 @@ public class TypeChangeStudy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("이런 것들이 존재했지");
+        Orc orc = new Orc();
+        Monster monster = new Monster();
+        monster.Grr();
+        orc = (Orc)monster;
+        orc.Grr();
+
+        //형변환 방법 (), is, as
+        if(orc is Monster)
+        {
+            monster = (Monster)orc;
+            monster.Grr();
+        }
     }
 
-    private void OnDestroy() {
-        Debug.Log("cout");
-    }
-
-    private void OnEnable() {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    class Monster
     {
-        
+        public void Grr()
+        {
+            Debug.Log("Grr...");
+        }
+    }
+    class Orc : Monster
+    {
+
+    }
+    class Troll : Monster
+    {
+
     }
 }
