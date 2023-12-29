@@ -1,0 +1,4 @@
+repository "GameProgramming@hy235@cloud"
+  path "/"
+    br "/main"
+    co "/main"
