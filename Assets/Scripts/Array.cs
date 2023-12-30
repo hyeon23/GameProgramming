@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Array : MonoBehaviour
 {
@@ -25,4 +26,11 @@ public class Array : MonoBehaviour
         },
 
     };
+
+    Stack stk = new Stack();
+
+    private void Start()
+    {
+        
+    }
 }
