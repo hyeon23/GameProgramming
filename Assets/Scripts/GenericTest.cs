@@ -19,7 +19,7 @@ using static Unity.VisualScripting.Member;
  * T는 명시한 부모 클래스의 자식 클래스
  * 
  * where T : 인터페이스 이름
- * T는 명시한 인터페이스 구현
+ * T는 명시한 인터페이스로 구현됨
  * 
  * wherer T : U
  * T는 또라는 형식 매개변수 U로부터 상속
@@ -50,6 +50,19 @@ public class GenericTest : MonoBehaviour
         for (int i = 0; i < source.Length; i++)
         {
             target[i] = source[i];
+        }
+    }
+
+    public void Copy<A, Bear>(A[] sourceA, A[] targetA, Bear[] sourceB, Bear[] targetB)
+    {
+        for (int i = 0; i < sourceA.Length; i++)
+        {
+            targetA[i] = sourceA[i];
+        }
+
+        for (int i = 0; i < sourceB.Length; i++)
+        {
+            targetB[i] = sourceB[i];
         }
     }
 

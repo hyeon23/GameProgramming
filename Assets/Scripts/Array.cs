@@ -26,11 +26,4 @@ public class Array : MonoBehaviour
         },
 
     };
-
-    Stack stk = new Stack();
-
-    private void Start()
-    {
-        
-    }
 }
