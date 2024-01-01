@@ -104,9 +104,5 @@ public class DOtween1 : MonoBehaviour
         tr1.Play();//실행
         //더이상 쓰이지 않음
         tr1.Kill();//메모리 할당 해제
-
-        //Sequence: Tweener는 하나의 행동에 대해 제어하는 자료형
-        //Sequence는 뜻에서 알 수 있듯 값을 제어하지 않고, 다른 Tweener들을 제어합니다. 그룹으로 애니메이션을 적용합니다.
-        //하나가 아닌 여러 Tweener를 그룹으로 제어해준다.
     }
 }
