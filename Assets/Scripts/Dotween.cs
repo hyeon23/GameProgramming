@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Dotween : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //Dotween
+    //tween: 오브젝트의 시간당 변화 or 두 지점을 이어주는 것
+    //Dotween or Dotween Pro 존재
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
