@@ -230,4 +230,8 @@ public class ObjectiveProgramming : MonoBehaviour
             throw new System.NotImplementedException();
         }
     }
+
+    //추상클래스: 클래스긴해서 객체 생성이 불가능 or 추상 메소드를 갖춰야 하는것 빼고는 클래스의 역할을 그대로 담당
+    //변수 선언도 가능
+    //but 인터페이스는 위에서 말한것을 제외하면 담을 수 없음
 }
