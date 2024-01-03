@@ -67,6 +67,8 @@ public class DOtween1 : MonoBehaviour
         //DO는 대상의 변화를 지시
         //SET은 변화의 방식을 조절
 
+
+
         //많이 사용하는 Set 계열
         //SetEase<>(Ease): 변화의 완급을 조절
         //SetLoops<>: 변화에 루프를 적용
@@ -104,5 +106,7 @@ public class DOtween1 : MonoBehaviour
         tr1.Play();//실행
         //더이상 쓰이지 않음
         tr1.Kill();//메모리 할당 해제
+
+        
     }
 }
