@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class DelegateTest2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public delegate void TestDelegate();
+
+    TestDelegate _testDelegate;
+
+    private void Start()
     {
-        
+        _testDelegate = TargetF;
     }
 
-    // Update is called once per frame
-    void Update()
+    void Do(TestDelegate del)
     {
-        
+        del();
+        del.Invoke();
+    }
+
+    void TargetF()
+    {
+        Debug.Log("TargetF");
     }
 }
