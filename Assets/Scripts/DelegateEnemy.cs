@@ -54,9 +54,9 @@ public class DelegateEnemy : MonoBehaviour
         anim.SetInteger("Stat", 2); // 사망
 
         //적이 죽었을 때,
-        //DelegateUIManager.instance.AddScore(transform.position);//스코어 증가
-        //DelegateItemManager.instance.DropItem(transform.position);//아이템 드랍
-        //DelegateParticle.instance.PlayDieParticle(transform.position);//파티클 재생
+        DelegateUIManager.instance.AddScore(transform.position);//스코어 증가
+        DelegateItemManager.instance.DropItem(transform.position);//아이템 드랍
+        DelegateParticle.instance.PlayDieParticle(transform.position);//파티클 재생
         //죽음 효과음 추가
         //적 동료 생성
         //...
