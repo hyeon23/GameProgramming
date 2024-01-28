@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
+using static UnityEngine.Debug;
 
 public class EnumeratorTest2 : MonoBehaviour
 {
@@ -32,14 +32,14 @@ public class EnumeratorTest2 : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        MyList myList = new MyList();
-        foreach(var one in myList)
-        {
-            Debug.Log(one);
-        }
-    }
+    //private void Start()
+    //{
+    //    MyList myList = new MyList();
+    //    foreach(var one in myList)
+    //    {
+    //        Debug.Log(one);
+    //    }
+    //}
 
     //Enumerator 내부 실행 로직
     //foreach의 위 코드가 내부적으로 어떻게 실행되는지 확인 
