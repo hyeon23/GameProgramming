@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+
+public class Test : MonoBehaviour, IEnumerable, IEnumerator
 {
     public delegate void MyDel();
     public MyDel _myDel;
@@ -22,17 +24,31 @@ public class Test : MonoBehaviour
     {
         
     }
-    
+
+    public enum Buff { None, Buff1, Buff2 }
+    public Buff _buf;
+
     public int Func2(int num)
     {
         return num;
     }
 
-    public enum Buff {  None, Buff1, Buff2}
-    public Buff _buf;
-    public void BuffCheck(Buff buff)
+    public IEnumerator GetEnumerator()
     {
-        Action action;
-        Func<int> fnc
+        throw new NotImplementedException();
     }
+
+    public object Current => throw new NotImplementedException();
+
+    public bool MoveNext()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Reset()
+    {
+        throw new NotImplementedException();
+    }
+
+    
 }
