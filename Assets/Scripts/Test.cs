@@ -122,15 +122,6 @@ public class Test : MonoBehaviour
                 print(code);
         }
 
-        // IEnumerable형식을 배열과 리스트로 바꿀 수 있다
-        {
-            int[] codes = (from item in items
-                           select item.code).ToArray();
-
-            List<int> codes2 = (from item in items
-                                select item.code).ToList();
-        }
-
         // where : 데이터 찾기
         {
             _items = from item in items
@@ -151,6 +142,15 @@ public class Test : MonoBehaviour
             _items = from item in items
                      orderby item.name descending
                      select item;
+        }
+
+        // IEnumerable형식을 배열과 리스트로 바꿀 수 있다
+        {
+            int[] codes = (from item in items
+                           select item.code).ToArray();
+
+            List<int> codes2 = (from item in items
+                                select item.code).ToList();
         }
 
         // from을 중복해 쓸 수 있다. select new { } 로 익명형식 만들기
