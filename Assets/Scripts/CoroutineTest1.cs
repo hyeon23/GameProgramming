@@ -16,7 +16,14 @@ public class CoroutineTest1 : MonoBehaviour
     private float fadeTime = 3.0f;
     private void Start()
     {
-        StartCoroutine(FadeIn());
+        Coroutine co1 = StartCoroutine(FadeIn());//IEnumerator 반환 타입 / 가급적 이 방식 사용
+        Coroutine co2 = StartCoroutine("FadeIn");//비추천 : 사용 X(인자 최대 1개밖에 전달 불가)
+        //string -> Coroutine으로 변환하므로, 성능 bad
+
+        StopCoroutine(co1);//가급적 이 방식 사용
+        StopCoroutine(FadeIn());
+        StopCoroutine("FadeIn");
+        StopAllCoroutines();//해당 스크립트의 모든 코루틴 종료
     }
     IEnumerator FadeIn()
     {
@@ -70,4 +77,20 @@ public class CoroutineTest1 : MonoBehaviour
         //프레임4
     }
 
+    /*
+     * 코루틴 사용 방법
+     * StartCoroutine() : 코루틴 실행 메소드
+     */
+
+    /*
+     * 코루틴 종료 방법
+     * StopCoroutine() : 코루틴 종료 메소드
+     * StopAllCoroution() : 해당 스크립트의 모든 코루틴 종료
+     */
+
+    /*
+     * 코루틴 작동 방식
+     * 기본적인 Enumerator는 배열과 컬렉션을 열거, 순회를 위한 개념이라 한 프레임에 동작이 종료
+     * Unity 코루틴을 통해 Enumerator를 열거, 순회하면, 여러 프레임에 동작이 진행
+     */
 }
