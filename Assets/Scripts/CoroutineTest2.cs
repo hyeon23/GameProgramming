@@ -51,6 +51,7 @@ public class CoroutineTest2 : MonoBehaviour
     private void Start()
     {
         StartCoroutine(WaitLoop());
+        StartCoroutine(CoroutineTest());
     }
 
     private void Update()
