@@ -274,12 +274,9 @@ public class Test : MonoBehaviour
         // Select : 값을 추출해 IEnumerable형식 만듦
         {
             IEnumerable<int> codes = items.Select(x => x.code);
-
             foreach (int code in codes)
                 print(code);
-
             var _customItems = items.Select(x => new { Name = x.name, CodeAdd = x.code + 1 });
-
             foreach (var _customItem in _customItems)
                 print(_customItem);
         }
@@ -289,9 +286,7 @@ public class Test : MonoBehaviour
         {
             int[] number = new int[] { 10, 20 };
             string[] animals = new string[] { "cat", "dog", "donkey" };
-
             var mix = number.SelectMany(num => animals, (n, a) => new { n, a });
-
             foreach (var a in mix)
                 print(a);
         }
@@ -494,20 +489,15 @@ public class Test : MonoBehaviour
         {
             //ArrayList itemArray = new ArrayList { 1, "2", 3, 4, 5 };
             ArrayList itemArray = new ArrayList { 1, 2, 3, 4, 5 };
-
             IEnumerable<int> _items = itemArray.Cast<int>();
-
-            foreach (var _item in _items)
-                print(_item);
+            foreach (var _item in _items) print(_item);
         }
 
         // OfType : ArrayList에서 그 타입만 추출, 실패는 건너뛰고 2와 4가 나옴
         {
             ArrayList itemArray = new ArrayList { 1, "2", 3, "4", 5 };
             IEnumerable<string> _items = itemArray.OfType<string>();
-
-            foreach (string _item in _items)
-                print(_item);
+            foreach (string _item in _items) print(_item);
         }
 
         // ToArray : 배열로 반환
