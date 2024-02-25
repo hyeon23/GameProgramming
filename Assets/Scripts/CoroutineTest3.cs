@@ -60,4 +60,6 @@ public class CoroutineTest3 : MonoBehaviour
     //전역적으로 만들고 사용
 
     //Util.cs 파일엔 매우 효율적이고 전역적으로 사용하는 공용 함수를 작성
+
+    //Utils.cs 파일의 경우 효율적인 작업을 위한 개발자들의 협업 공간으로 사용
 }
