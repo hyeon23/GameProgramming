@@ -54,6 +54,8 @@ public class CoroutineTest3 : MonoBehaviour
     //WaitForSeconds wf0.3 = new WaitForSeconds(0.3f);
     //WaitForSeconds wf0.4 = new WaitForSeconds(0.4f);
     //WaitForSeconds wf0.5 = new WaitForSeconds(0.5f);
+
+    //피곤한다.
     //...
     //이렇게 캐싱 해야 하나...
     //아니다 => 정답 Util 클래스에 생성

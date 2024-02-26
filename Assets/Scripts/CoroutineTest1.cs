@@ -57,22 +57,18 @@ public class CoroutineTest1 : MonoBehaviour
         Debug.Log("1");
         yield return new WaitForSeconds(1);
         //제어권을 넘김 = 대기
-
         //일정 조건 달성 시 재개
         //프레임2
         Debug.Log("1");
         yield return new WaitForSeconds(1);
         //제어권을 넘김 = 대기
-
         gameObject.SetActive(false);
         //Destroy(gameObject);
-
         //일정 조건 달성 시 재개
         //프레임3
         Debug.Log("1");
         yield return new WaitForSeconds(1);
         //제어권을 넘김 = 대기
-
         //일정 조건 달성 시 재개
         //프레임4
     }
