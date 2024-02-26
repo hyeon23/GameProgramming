@@ -64,4 +64,23 @@ public class CoroutineTest3 : MonoBehaviour
     //Util.cs 파일엔 매우 효율적이고 전역적으로 사용하는 공용 함수를 작성
 
     //Utils.cs 파일의 경우 효율적인 작업을 위한 개발자들의 협업 공간으로 사용
+
+    //코루틴 체인
+    //StartCoroutine은 코루틴을 반환해주기 때문에, 특정 코루틴이 끝나면 코루틴을 진행하는 방식으로 코드 작성 가능
+    IEnumerator Coroutine1()
+    {
+        yield return StartCoroutine(Coroutine2());
+        yield return StartCoroutine(Coroutine3());
+        print("모든 코루틴 끝남");
+    }
+
+    IEnumerator Coroutine2()
+    {
+        yield return null;
+    }
+
+    IEnumerator Coroutine3()
+    {
+        yield return null;
+    }
 }
