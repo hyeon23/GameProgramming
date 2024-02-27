@@ -18,16 +18,16 @@ public class LinQ : MonoBehaviour
         new Item(4,"melon"),
     };
     //code가 1보다 큰 것을 찾아 오름차순 정렬 코드
-    IEnumerable<Item> _items =
-        from item in items
-        where item.code > 1
-        orderby item.code
-        select item;
+    //IEnumerable<Item> _items =
+    //    from item in items
+    //    where item.code > 1
+    //    orderby item.code
+    //    select item;
 
-    IEnumerable<Item> _items2 = items
-        .Where(x => x.code > 1);
-        .OrderBy(x => Matrix4x4.code);
-    j
+    //IEnumerable<Item> _items2 = items
+    //    .Where(x => x.code > 1);
+    //    .OrderBy(x => Matrix4x4.code);
+    //j
 
 
 }
